@@ -1,0 +1,507 @@
+/*
+* Theme: Stockmarket School
+* Author: Nishant
+* Version: 1.0.0
+*/
+
+
+
+/******* GLOBAL CSS *******/
+.btn{
+    padding: 5px 20px;
+    border-radius: 2px;
+}
+.btn-primary{
+    background: #10003d;
+    border-color: #10003d;
+    color: #ffffff !important;
+}
+.btn-primary:hover{
+    background: #007bff;
+    border-color: #007bff;
+}
+.navbar {
+    box-shadow: 0px 1px 5px 0px #999999;
+}
+.navbar-nav  li.nav-item {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.navbar-nav  li.nav-item:first-child {
+    margin-right: 10px;
+    margin-left: 0px;
+}
+.navbar-nav  li.nav-item:last-child {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+ul.fancy-list{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px
+}
+ul.fancy-list li::before{
+    content: "\f00c";
+    display: inline-block;
+    margin-right: 15px;
+    font-family: 'FontAwesome';
+    font-size: 21px;
+}
+h2.section-title {
+    width: 100%;
+    color: #000000;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+h2.section-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    margin: 10px auto 0 auto;
+    background: #000000;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.site-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.site-content .content-area {
+    border-right: 1px solid #dddddd;
+}
+/******* HERO SLIDER *******/
+.hero-slider{
+    position: relative;
+}
+.hero-slider .slide{
+    width: 100%;
+    min-height: 450px;
+    padding: 100px 0px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.hero-slider .slide .slide-content{
+    width: 100%;
+}
+.hero-slider .slick-arrow{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 21px;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0px 0px 5px 0px #999999;
+}
+.hero-slider .slick-arrow:hover,
+.hero-slider .slick-arrow:focus{
+    color: #007bff;
+}
+.hero-slider .slick-arrow.slick-prev{
+    left: 0px;
+}
+.hero-slider .slick-arrow.slick-next{
+    right: 0px;
+}
+ul.slick-dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+}
+ul.slick-dots li{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+ul.slick-dots li:first-child{
+    margin-right: 5px;
+    margin-left: 0px;
+}
+ul.slick-dots li:last-child{
+    margin-right: 0px;
+    margin-left: 5px;
+}
+ul.slick-dots li > button{
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    text-indent: -9999px;
+    position: relative;
+}
+ul.slick-dots li.slick-active > button:before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/******* Newsletter Optin ********/
+section.newsletter-optin {
+    background: #333333;
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 20px 0px;
+}
+.optin-desc > h3 {
+    font-size: 28px;
+    font-weight: 500;
+}
+.optin-desc > p{
+    margin-bottom: 0;
+}
+/****** Optin Modal ******/
+.optin-modal{
+    padding: 0 !important;
+}
+.optin-modal .modal-dialog {
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.optin-modal .modal-dialog .modal-content{
+    width: 100%;
+    height: 100%;
+}
+.optin-modal .modal-title{
+    display: block;
+    width: 100%;
+    font-size: 26px;
+    font-weight: 500;
+    color: #10003d;
+    text-transform: uppercase;
+    text-align: center;
+}
+.footer-credits {
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-credits > p {
+    margin-bottom: 0;
+}
+/****** service section ******/
+section.services {
+    padding: 50px 0px 50px 0px;
+}
+section.services h2.section-title {
+    color: #10003d;
+}
+section.services h2.section-title::after {
+    background: #10003d;
+}
+section.services .service {
+    margin-bottom: 20px;
+}
+section.services .service .service-wrapper {
+    padding: 30px 10px;
+    background: #ffffff;
+}
+.service  .service-icon {
+    font-size: 30px;
+    color: #ffffff;
+}
+.service  .service-icon > i {
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #10003d;
+    position: relative;
+}
+.service .service-icon > i::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.service h3.service-title {
+    font-size: 26px;
+    color: #000000;
+    margin-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.service p.service-desc {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+/****** Tips & Tricks ******/
+section.tips-tricks .tips {
+    padding: 50px;
+    background: #eeeeee;
+}
+section.tips-tricks .tricks {
+    padding: 50px;
+    background: #10003d;
+}
+section.tips-tricks h4.col-title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+section.tips-tricks .tips h4.col-title{
+    color: #000000;
+}
+section.tips-tricks .tricks h4.col-title{
+    color: #ffffff;
+}
+section.tips-tricks .tips ul.fancy-list li{
+    color: #000000;
+}
+section.tips-tricks .tricks ul.fancy-list li{
+    color: #ffffff;
+}
+/****** Advantages *****/
+section.advantages{
+    padding: 50px 0px 50px 0px;
+}
+section.advantages h2.section-title {
+    color: #10003d;
+}
+section.advantages h2.section-title::after {
+    background: #10003d;
+}
+.advantages-desc{
+    text-align: center;
+}
+/******* Testimonials *******/
+section.testimonials{
+    padding: 50px 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section.testimonials .testimonials-wrapper{
+    padding: 0;
+    position: relative;
+}
+section.testimonials .testimonial {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #dddddd;
+}
+section.testimonials .testimonial .quote-left {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #10003d;
+}
+section.testimonials .testimonial .testimonial-desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+section.testimonials .testimonial .quote-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #10003d;
+}
+section.testimonials .testimonial .client {
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+section.testimonials .slick-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 21px;
+    cursor: pointer;
+    z-index: 100;
+}
+section.testimonials .slick-arrow:hover,
+section.testimonials .slick-arrow:focus{
+    color: #007bff;
+}
+section.testimonials .slick-arrow.slick-prev{
+    left: 10px;
+}
+section.testimonials .slick-arrow.slick-next{
+    right: 10px;
+}
+/******* Latest Blog ********/
+.latest-blog{
+    padding: 50px 0;
+}
+.latest-blog .post-content {
+    /* padding: 0 15px; */
+}
+.latest-blog .post-thumbnail {
+    margin-bottom: 20px;
+}
+.latest-blog .post-title{
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1;
+    color: #333333;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+.latest-blog .post-title:hover{
+    color: #1345ef;
+    text-decoration: none;
+}
+.latest-blog .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.latest-blog .post-meta > span,
+.latest-blog .post-meta .post-category > a {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 300;
+}
+.latest-blog .post-meta .post-category > a:hover,
+.latest-blog .post-meta .post-category > a:focus{
+    color: #10003d;
+    text-decoration: none;
+}
+.latest-blog .post-desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}
+/****** Blog Post *****/
+.blog .post {
+    padding: 15px;
+    box-shadow: 0px 0px 5px 0px #eeeeee;
+}
+.blog .post-thumbnail {
+    margin-bottom: 20px;
+}
+.blog .post-title{
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1;
+    color: #333333;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+.blog .post-title:hover{
+    color: #1345ef;
+    text-decoration: none;
+}
+.blog .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.blog .post-meta > span {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 300;
+}
+.blog .post-desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}
+/****** Single Post *****/
+.single .post-thumbnail {
+    margin-bottom: 20px;
+}
+.single .post-title{
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1;
+    color: #333333;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+.single .post-title:hover{
+    color: #1345ef;
+    text-decoration: none;
+}
+.single .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.single .post-meta > span {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 300;
+}
+.single .post-desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}
+/******* Footer *******/
+.site-footer {
+    background-color: #f8f9fa;
+}
+/****** Widgets ******/
+.widget ul {
+    list-style: none;
+    padding-left: 0;
+}
+.widget ul li{
+    margin-bottom: 10px;
+}
+.widget ul li a{
+    color: #333333;
+}
+.widget ul li a:hover,
+.widget ul li a:focus{
+    color: #007bff;
+    text-decoration: none;
+}
