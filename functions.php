@@ -100,6 +100,47 @@ function theme_widgets(){
 }
 add_action( 'widgets_init', 'theme_widgets' );
 
+/********************
+ * Theme Init
+ */
+function testimonial_init(){
+    /* Register Testimonial Post Type */
+    $post_type = 'testimonial';
+    $labels = array(
+        'name'               => _x( 'Testimonials', 'post type general name', 'stockschool' ),
+        'singular_name'      => _x( 'Testimonial', 'post type singular name', 'stockschool' ),
+        'menu_name'          => _x( 'Testimonials', 'admin menu', 'stockschool' ),
+        'name_admin_bar'     => _x( 'Testimonial', 'add new on admin bar', 'stockschool' ),
+        'add_new'            => _x( 'Add New', 'testimonial', 'stockschool' ),
+        'add_new_item'       => __( 'Add New Testimonial', 'stockschool' ),
+        'new_item'           => __( 'New Testimonial', 'stockschool' ),
+        'edit_item'          => __( 'Edit Testimonial', 'stockschool' ),
+        'view_item'          => __( 'View Testimonial', 'stockschool' ),
+        'all_items'          => __( 'All Testimonials', 'stockschool' ),
+        'search_items'       => __( 'Search Testimonials', 'stockschool' ),
+        'parent_item_colon'  => __( 'Parent Testimonials:', 'stockschool' ),
+        'not_found'          => __( 'No testimonials found.', 'stockschool' ),
+        'not_found_in_trash' => __( 'No testimonials found in Trash.', 'stockschool' )
+    );
+    $args = array(
+        'labels'             => $labels,
+        'description'        => __( 'Description.', 'stockschool' ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'testimonial' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+    );
+    register_post_type( $post_type, $args );
+}
+add_action( 'init', 'testimonial_init' );
+
 /**********************
  * Include walker class
  */
@@ -114,3 +155,30 @@ if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/l
 if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/lib/ReduxFramework/config/config.php' ) ) {
     require_once( dirname( __FILE__ ) . '/lib/ReduxFramework/config/config.php' );
 }
+/**************************
+ * Advanced Custom Fields
+ */
+// Define path and URL to the ACF plugin.
+define( 'MY_ACF_PATH', get_stylesheet_directory() . '/lib/acf/' );
+define( 'MY_ACF_URL', get_stylesheet_directory_uri() . '/lib/acf/' );
+
+// 1. customize ACF path
+add_filter('acf/settings/path', 'my_acf_settings_path');
+function my_acf_settings_path( $path ) {
+    // return
+    return MY_ACF_PATH;
+}
+// 2. customize ACF dir
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
+ 
+function my_acf_settings_dir( $dir ) {
+    // return
+    return MY_ACF_URL;
+}
+
+// Include the ACF plugin.
+include_once( MY_ACF_PATH . 'acf.php' );
+
+// Define path and URL to the ACF-repeater plugin.
+define( 'MY_ACFR_PATH', get_stylesheet_directory() . '/lib/acf-repeater/' );
+include_once( MY_ACFR_PATH . 'acf-repeater.php' );

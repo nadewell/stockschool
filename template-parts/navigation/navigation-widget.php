@@ -1,0 +1,1 @@
+<button type="button" class="free-trial btn btn-primary" data-toggle="modal" data-target="#trialModal">Free Trial</button>

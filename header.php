@@ -12,4 +12,12 @@
 </head>
 <body <?php body_class(); ?>>
 
-<?php get_template_part( 'template-parts/header/header' ); ?>
+<?php 
+
+    get_template_part( 'template-parts/header/header' ); 
+
+    if( ( is_page() && !is_front_page() ) || is_single() || is_home()  ){
+        get_template_part( 'template-parts/header/banner' );
+    }
+
+?>

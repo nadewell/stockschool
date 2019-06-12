@@ -72,8 +72,32 @@ img{
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.site-content .content-area {
-    border-right: 1px solid #dddddd;
+.free-trial {
+    margin-left: 15px;
+    border-radius: 5px;
+}
+.hero-banner {
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.single .hero-banner {
+    min-height: 400px;
+}
+.hero-banner h1{
+    margin: 0;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: #10003d;
 }
 /******* HERO SLIDER *******/
 .hero-slider{
@@ -296,7 +320,7 @@ section.advantages h2.section-title {
 section.advantages h2.section-title::after {
     background: #10003d;
 }
-.advantages-desc{
+section.advantages .advantages-desc{
     text-align: center;
 }
 /******* Testimonials *******/
@@ -370,17 +394,17 @@ section.testimonials .slick-arrow.slick-prev{
 section.testimonials .slick-arrow.slick-next{
     right: 10px;
 }
+section.testimonials .row:first-child{
+    margin-bottom: 50px;
+}
 /******* Latest Blog ********/
-.latest-blog{
+section.latest-blog{
     padding: 50px 0;
 }
-.latest-blog .post-content {
-    /* padding: 0 15px; */
-}
-.latest-blog .post-thumbnail {
+section.latest-blog .post-thumbnail {
     margin-bottom: 20px;
 }
-.latest-blog .post-title{
+section.latest-blog .post-title{
     display: inline-block;
     font-size: 32px;
     font-weight: 500;
@@ -389,41 +413,49 @@ section.testimonials .slick-arrow.slick-next{
     padding-top: 10px;
     margin-bottom: 15px;
 }
-.latest-blog .post-title:hover{
+section.latest-blog .post-title:hover{
     color: #1345ef;
     text-decoration: none;
 }
-.latest-blog .post-meta {
+section.latest-blog .post-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
 }
-.latest-blog .post-meta > span,
-.latest-blog .post-meta .post-category > a {
+section.latest-blog .post-meta > span,
+section.latest-blog .post-meta .post-category > a {
     color: #999999;
     font-size: 14px;
     font-weight: 300;
 }
-.latest-blog .post-meta .post-category > a:hover,
-.latest-blog .post-meta .post-category > a:focus{
+section.latest-blog .post-meta .post-category > a:hover,
+section.latest-blog .post-meta .post-category > a:focus{
     color: #10003d;
     text-decoration: none;
 }
-.latest-blog .post-desc {
+section.latest-blog .post-desc {
     font-size: 16px;
     font-weight: 400;
     color: #333333;
 }
-/****** Blog Post *****/
-.blog .post {
-    padding: 15px;
-    box-shadow: 0px 0px 5px 0px #eeeeee;
+section.latest-blog .row:first-child{
+    margin-bottom: 50px;
 }
-.blog .post-thumbnail {
+/****** Blog Post *****/
+.blog .post,
+.archive .post,
+.search .post {
+    margin-bottom: 30px;
+}
+.blog .post-thumbnail,
+.archive .post-thumbnail,
+.search .post-thumbnail {
     margin-bottom: 20px;
 }
-.blog .post-title{
+.blog .post-title, 
+.archive .post-title, 
+.search .post-title {
     display: inline-block;
     font-size: 32px;
     font-weight: 500;
@@ -432,22 +464,46 @@ section.testimonials .slick-arrow.slick-next{
     padding-top: 10px;
     margin-bottom: 15px;
 }
-.blog .post-title:hover{
+.blog .post-title:hover,
+.blog .post-title:focus, 
+.archive .post-title:hover,
+.archive .post-title:focus,
+.search .post-title:hover,
+.search .post-title:focus {
     color: #1345ef;
     text-decoration: none;
 }
-.blog .post-meta {
+.blog .post-meta,
+.archive .post-meta,
+.search .post-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
 }
-.blog .post-meta > span {
+.blog .post-meta > span, 
+.archive .post-meta > span, 
+.search .post-meta > span {
     color: #999999;
     font-size: 14px;
     font-weight: 300;
 }
-.blog .post-desc {
+.blog .post-meta .post-category a,
+.archive .post-meta .post-category a,
+.search .post-meta .post-category a {
+    color: #999999;
+}
+.blog .post-meta .post-category a:hover,
+.blog .post-meta .post-category a:focus,
+.archive .post-meta .post-category a:hover,
+.archive .post-meta .post-category a:focus,
+.search .post-meta .post-category a:hover,
+.search .post-meta .post-category a:focus {
+    color: #1345ef;
+}
+.blog .post-desc,
+.archive .post-desc,
+.search .post-desc {
     font-size: 16px;
     font-weight: 400;
     color: #333333;
@@ -455,6 +511,8 @@ section.testimonials .slick-arrow.slick-next{
 /****** Single Post *****/
 .single .post-thumbnail {
     margin-bottom: 20px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
 }
 .single .post-title{
     display: inline-block;
@@ -480,6 +538,13 @@ section.testimonials .slick-arrow.slick-next{
     font-size: 14px;
     font-weight: 300;
 }
+.single .post-meta .post-category a {
+    color: #999999;
+}
+.single .post-meta .post-category a:hover,
+.single .post-meta .post-category a:focus {
+    color: #1345ef;
+}
 .single .post-desc {
     font-size: 16px;
     font-weight: 400;
@@ -490,12 +555,32 @@ section.testimonials .slick-arrow.slick-next{
     background-color: #f8f9fa;
 }
 /****** Widgets ******/
+.widget {
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 5px 0px #eeeeee;
+}
+.widget-title {
+    margin-bottom: 25px;
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 500;
+    color: #333333;
+    border-left: 4px solid #10003d;
+    padding-left: 5px;
+}
 .widget ul {
     list-style: none;
     padding-left: 0;
+    margin-bottom: 0;
 }
 .widget ul li{
     margin-bottom: 10px;
+}
+.widget ul li:last-child{
+    margin-bottom: 0;
 }
 .widget ul li a{
     color: #333333;

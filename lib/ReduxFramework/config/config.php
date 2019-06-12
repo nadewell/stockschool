@@ -218,17 +218,25 @@ Redux::setHelpSidebar( $opt_name, $content );
  */
 
 /*
-     *
-     * ---> START SECTIONS
-     *
-     */
-
-    /*
+*
+* ---> START SECTIONS
+*
+*/
 // -> START Basic Fields
 Redux::setSection( $opt_name, array(
-    'title'            => __( 'Basic Fields', 'redux-framework-demo' ),
+    'title'            => __( 'Newsletter Form', 'redux-framework-demo' ),
     'id'               => 'basic',
-    'desc'             => __( 'These are really basic fields!', 'redux-framework-demo' ),
+    'desc'             => __( 'Newsletter Configuration!', 'redux-framework-demo' ),
     'customizer_width' => '400px',
-    'icon'             => 'el el-home'
+    'icon'             => 'el el-envelope',
+    'fields'           => array(
+        array(
+            'id'       => 'newsletter-shortcode',
+            'type'     => 'text',
+            'title'    => __( 'Newsletter Shortcode', 'redux-framework-demo' ),
+            'subtitle' => __( 'shortcode', 'redux-framework-demo' ),
+            'desc'     => __( 'shortcode to newsletter form to to add in popup', 'redux-framework-demo' ),
+            'default'  => '',
+        ),
+    )
 ) );

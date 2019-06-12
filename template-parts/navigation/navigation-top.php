@@ -1,7 +1,4 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="">
-    
-    </ul>
     <?php
         $args = array(
             'menu'              =>  'primary',
@@ -13,5 +10,5 @@
         );
         wp_nav_menu($args);
     ?>
-    <a class="nav-link btn btn-primary" href="#">Free Trial</a>
+    <?php get_template_part( 'template-parts/navigation/navigation-widget' ); ?>
 </div>
