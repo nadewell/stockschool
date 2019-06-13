@@ -50,10 +50,11 @@ $ns_button = get_field('ns_button');
 /*************
  * Services Content
  */
+$sr_image = get_field('sr_image');
 $sr_heading = get_field('sr_heading');
 $services = get_field('services');
 ?>
-<section class="services" data-parallax="scroll" data-image-src="assets/images/blueprint-design-agency.jpg">
+<section class="services" data-parallax="scroll" data-image-src="<?php echo $sr_image['url']; ?>">
     <div class="container">
         <div class="row">
             <h2 class="section-title"><?php echo $sr_heading; ?></h2>
@@ -131,9 +132,10 @@ $av_list2 = get_field('av_list2');
 /*************
  * Testimonials Content
  */
+$ts_image = get_field('ts_image');
 $ts_heading = get_field('ts_heading');
 ?>
-<section class="testimonials" data-parallax="scroll" data-image-src="assets/images/blueprint-design-agency.jpg">
+<section class="testimonials" data-parallax="scroll" data-image-src="<?php echo $ts_image['url']; ?>">
     <div class="container">
         <div class="row justify-content-center">
             <h2 class="section-title"><?php echo $ts_heading; ?></h2>
