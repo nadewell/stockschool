@@ -6,7 +6,7 @@ get_header();
 <div id="page" class="site-content">
     <div class="container">
         <div class="row">
-            <div id="primary" class="content-area col-md-8 col-sm-12">
+            <div id="primary" class="content-area col-md-12 col-sm-12">
                 <div class="row">
                     <?php
                     if( have_posts() ):
@@ -19,9 +19,6 @@ get_header();
                     endif;
                     ?>
                 </div>
-            </div>
-            <div id="secondary" class="sidebar-area col-md-4 col-sm-12">
-                <?php get_sidebar(); ?>
             </div>
         </div>
     </div>

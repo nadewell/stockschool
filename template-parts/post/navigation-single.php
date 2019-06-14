@@ -5,7 +5,7 @@ $author_name = get_the_author();
 <div class="post-extras">
     <div class="author-box">
         <div class="author-gravtar"><img src="<?php echo get_avatar_url( $author_id ); ?>" alt="<?php echo $author_name; ?>"></div>
-        <div class="author-name"><h4><?php  echo $author_name; ?></h4></div>
+        <div class="author-name"><h4 itemprop="author" itemtype="https://schema.org/Person><?php  echo $author_name; ?></h4></div>
     </div>
     <?php
     $post_nav_args  = array(

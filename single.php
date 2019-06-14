@@ -25,9 +25,8 @@ get_header();
                 </main>
                 
             </div>
-            <div id="secondary" class="sidebar-area col-md-4 col-sm-12">
-                <?php get_sidebar(); ?>
-            </div>
+            <!-- Sidebar -->
+            <?php get_sidebar(); ?>
         </div>
     </div>
 </div>

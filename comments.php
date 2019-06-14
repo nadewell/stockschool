@@ -46,6 +46,8 @@ if ( post_password_required() ) {
 						'style'       => 'ul',
 						'short_ping'  => true,
 						'reply_text'  => '<i class="fa fa-reply" aria-hidden="true"></i>'. __( ' Reply', 'stockschool' ),
+						'walker'	  => new Schema_Walker_Comment(),
+						'format'	  => 'schema'
 					)
 				);
 			?>
@@ -69,7 +71,19 @@ if ( post_password_required() ) {
 		<?php
 	endif;
 
-	comment_form();
+	$comments_args = array(
+		'class_submit'      => 'submit btn btn-primary',
+        // change the title of send button 
+        'label_submit'=>'Post Comment',
+        // change the title of the reply section
+        'title_reply'=>'Leave a Reply or Comment',
+        // remove "Text or HTML to be displayed after the set of comment fields"
+        'comment_notes_after' => '',
+        // redefine your own textarea (the comment body)
+        'comment_field' => '<p class="comment-form-comment form-group"><textarea class="form-control" id="comment" name="comment" aria-required="true"></textarea></p>',
+	);
+
+	comment_form($comments_args);
 	?>
 
 </div><!-- #comments -->

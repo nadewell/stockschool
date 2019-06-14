@@ -13,7 +13,7 @@ set_query_var('post_type', 'testimonial');
                     <?php
                     if( have_posts() ):
                         while( have_posts() ): the_post();
-                            get_template_part( 'template-parts/post/content','testimonials' );
+                            get_template_part( 'template-parts/post/content','testimonial' );
                         endwhile;
 
                     else:
@@ -22,9 +22,8 @@ set_query_var('post_type', 'testimonial');
                     ?>
                 </div>
             </div>
-            <div id="secondary" class="sidebar-area col-md-4 col-sm-12">
-                <?php get_sidebar(); ?>
-            </div>
+            <!-- Sidebar -->
+            <?php get_sidebar(); ?>
         </div>
     </div>
 </div>

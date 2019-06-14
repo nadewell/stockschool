@@ -1,4 +1,4 @@
-<footer class="site-footer">
+<footer class="site-footer" itemtype="https://schema.org/WPFooter" itemscope>
     <div class="container">
         <div class="row">
             <div class="widget-area col-md-3 col-sm-12">

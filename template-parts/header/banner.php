@@ -14,7 +14,7 @@ if(get_query_var('pagename')){
 <div class="hero-banner <?php if( $featured_image == '' ){ echo 'bg-dark'; } ?>" data-parallax="scroll" data-speed="0" data-image-src="<?php echo $featured_image[0]; ?>">
     <div class="container">
         <div class="row align-items-center justify-content-center">
-            <h1 class="page-title"><?php echo $page_name; ?></h1>
+            <h1 class="page-title" itemprop="headline"><?php echo $page_name; ?></h1>
         </div>
     </div>
 </div>

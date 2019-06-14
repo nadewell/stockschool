@@ -500,12 +500,21 @@ section.latest-blog .row:first-child{
     color: #333333;
     margin-bottom: 15px;
 }
-.blog .post-title:hover,
-.blog .post-title:focus, 
-.archive .post-title:hover,
-.archive .post-title:focus,
-.search .post-title:hover,
-.search .post-title:focus {
+.blog .post-title > a, 
+.archive .post-title > a, 
+.search .post-title > a {
+    display: block;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1;
+    color: #333333;
+}
+.blog .post-title:hover a,
+.blog .post-title:focus a, 
+.archive .post-title:hover a,
+.archive .post-title:focus a,
+.search .post-title:hover a,
+.search .post-title:focus a {
     color: #1345ef;
     text-decoration: none;
 }
@@ -785,4 +794,11 @@ section.latest-blog .row:first-child{
 .comment-respond .comment-form .logged-in-as > a:hover,
 .comment-respond .comment-form .logged-in-as > a:focus{
     color: #10003d;
+}
+.comments-area .comment-list .children {
+    list-style: none;
+    margin-top: 10px;
+}
+.comments-area .comment-list .children .comment:last-child {
+    margin-bottom: 0;
 }

@@ -144,7 +144,8 @@ add_action( 'init', 'testimonial_init' );
 /**********************
  * Include walker class
  */
-require ( 'inc/custom-walker.php' );
+require ( 'inc/navigation-walker.php' );
+require ( 'inc/comment-walker.php' );
 
 /***********************
  * Redux framework
@@ -155,6 +156,7 @@ if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/l
 if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/lib/ReduxFramework/config/config.php' ) ) {
     require_once( dirname( __FILE__ ) . '/lib/ReduxFramework/config/config.php' );
 }
+
 /**************************
  * Advanced Custom Fields
  */
@@ -170,7 +172,6 @@ function my_acf_settings_path( $path ) {
 }
 // 2. customize ACF dir
 add_filter('acf/settings/dir', 'my_acf_settings_dir');
- 
 function my_acf_settings_dir( $dir ) {
     // return
     return MY_ACF_URL;
@@ -182,3 +183,12 @@ include_once( MY_ACF_PATH . 'acf.php' );
 // Define path and URL to the ACF-repeater plugin.
 define( 'MY_ACFR_PATH', get_stylesheet_directory() . '/lib/acf-repeater/' );
 include_once( MY_ACFR_PATH . 'acf-repeater.php' );
+
+// Define ACF fields JSON import 
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+function my_acf_json_save_point( $path ) {
+    // update path
+    $path = get_stylesheet_directory() . '/inc/acf-fields-export.json';
+    // return
+    return $path;
+}
