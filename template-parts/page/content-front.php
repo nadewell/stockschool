@@ -7,7 +7,7 @@ $slides = get_field('slider');
 ?>
 <section class="hero-slider">
     <?php foreach ( $slides as $slide ): ?>
-    <div class="slide pb-5 pt-5" data-parallax="scroll" data-image-src="<?php echo $slide['image']['url']; ?>">
+    <div class="slide pb-5 pt-5" data-attachment="scroll" data-image="<?php echo $slide['image']['url']; ?>">
         <div class="slide-content">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
@@ -54,7 +54,7 @@ $sr_image = get_field('sr_image');
 $sr_heading = get_field('sr_heading');
 $services = get_field('services');
 ?>
-<section class="services" data-parallax="scroll" data-image-src="<?php echo $sr_image['url']; ?>">
+<section class="services" data-attachment="fixed" data-image="<?php echo $sr_image['url']; ?>">
     <div class="container">
         <div class="row">
             <h2 class="section-title"><?php echo $sr_heading; ?></h2>
@@ -135,7 +135,7 @@ $av_list2 = get_field('av_list2');
 $ts_image = get_field('ts_image');
 $ts_heading = get_field('ts_heading');
 ?>
-<section class="testimonials" data-parallax="scroll" data-image-src="<?php echo $ts_image['url']; ?>">
+<section class="testimonials" data-attachment="scroll" data-image="<?php echo $ts_image['url']; ?>">
     <div class="container">
         <div class="row justify-content-center">
             <h2 class="section-title"><?php echo $ts_heading; ?></h2>
