@@ -17,7 +17,7 @@ $opt_name = apply_filters( 'redux_demo/opt_name', $opt_name );
  * All the possible arguments for Redux.
  * For full documentation on arguments, please refer to: https://github.com/ReduxFramework/ReduxFramework/wiki/Arguments
  * */
-
+ 
 $theme = wp_get_theme(); // For use with some settings. Not necessary.
 
 $args = array(
@@ -224,8 +224,33 @@ Redux::setHelpSidebar( $opt_name, $content );
 */
 // -> START Basic Fields
 Redux::setSection( $opt_name, array(
+    'title'            => __( 'Header', 'redux-framework-demo' ),
+    'id'               => 'header',
+    'desc'             => __( 'Header Configuration!', 'redux-framework-demo' ),
+    'customizer_width' => '400px',
+    'icon'             => 'el el-bar',
+) );
+Redux::setSection( $opt_name, array(
+    'title'            => __( 'Header Widget', 'redux-framework-demo' ),
+    'id'               => 'header-widget',
+    'desc'             => __( 'Header Configuration!', 'redux-framework-demo' ),
+    'subsection'       => true,
+    'customizer_width' => '400px',
+    'icon'             => 'el el-envelope',
+    'fields'           => array(
+        array(
+            'id'       => 'header-widget',
+            'type'     => 'textarea',
+            'title'    => __( 'Header Widget', 'redux-framework-demo' ),
+            'subtitle' => __( 'header widget', 'redux-framework-demo' ),
+            'desc'     => __( 'Widget which is place besides navigation menu', 'redux-framework-demo' ),
+            'default'  => '',
+        ),
+    )
+) );
+Redux::setSection( $opt_name, array(
     'title'            => __( 'Newsletter Form', 'redux-framework-demo' ),
-    'id'               => 'basic',
+    'id'               => 'newsletter',
     'desc'             => __( 'Newsletter Configuration!', 'redux-framework-demo' ),
     'customizer_width' => '400px',
     'icon'             => 'el el-envelope',

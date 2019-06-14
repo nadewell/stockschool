@@ -1,1 +1,7 @@
-<button type="button" class="free-trial btn btn-primary" data-toggle="modal" data-target="#trialModal">Free Trial</button>
+<?php 
+
+$header_widget = get_option('redux_options')['header-widget'];
+
+if($header_widget != ''){
+    echo do_shortcode($header_widget);
+}
