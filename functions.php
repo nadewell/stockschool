@@ -33,13 +33,16 @@ add_action( 'wp_enqueue_scripts', 'theme_scripts' );
  * Theme Setup
  */
 function theme_setup(){
+    /* post thumbnail support */
     add_theme_support('post-thumbnails');
+    /* custom logo support */
     add_theme_support('custom-logo');
-    add_theme_support('custom-header');
-    add_theme_support('custom-background');
-
+    /* Title tag support */
+    add_theme_support( 'title-tag' );
     /* Register main primary menu */
     register_nav_menu('primary', 'Primary menu');
+    /* RSS Feed Link */
+    add_theme_support( 'automatic-feed-links' );
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 
