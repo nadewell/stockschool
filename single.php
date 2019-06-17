@@ -14,7 +14,7 @@ get_header();
                             // Post Content Template 
                             get_template_part( 'template-parts/post/content','single' );
                             // Post Navigation template
-                            get_template_part('template-parts/post/navigation', 'single' );
+                            get_template_part('template-parts/post/pagination', 'single' );
                             // If comments are open or we have at least one comment, load up the comment template.
                             if ( comments_open() || get_comments_number() ) :
                                 comments_template();

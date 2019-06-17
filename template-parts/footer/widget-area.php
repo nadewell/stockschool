@@ -1,3 +1,8 @@
+<?php
+
+if( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active_sidebar('footer-3') || is_active_sidebar('footer-4') ):
+
+?>
 <footer class="site-footer" itemtype="https://schema.org/WPFooter" itemscope>
     <div class="container">
         <div class="row">
@@ -31,5 +36,9 @@
             </div>
         </div>
     </div>
-    <?php get_template_part( 'template-parts/footer/copyright' ); ?>
 </footer>
+<?php 
+
+endif;
+
+get_template_part( 'template-parts/footer/copyright' ); ?>

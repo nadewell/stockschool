@@ -1,6 +1,16 @@
 <?php
 
 get_header();
+
+global $query;
+$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
+$args  = array(
+    'orderby'           => 'date',
+    'order'             => 'DESC',
+    'posts_per_page'    => 3,
+    'paged'             => $paged
+);
+$query = new WP_Query($args);
 ?>
 
 <div id="page" class="site-content">
@@ -9,8 +19,8 @@ get_header();
             <div id="primary" class="content-area col-md-8 col-sm-12">
                 <main id="main" class="site-main" role="main">
                     <?php
-                    if( have_posts() ):
-                        while( have_posts() ): the_post();
+                    if( $query->have_posts() ):
+                        while( $query->have_posts() ): $query->the_post();
                             get_template_part( 'template-parts/post/content' );
                         endwhile;
                     else:
