@@ -668,7 +668,7 @@
                 "name": "tp_title",
                 "type": "text",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -727,7 +727,7 @@
                 "name": "tr_title",
                 "type": "text",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -819,9 +819,9 @@
                 "key": "field_5d0113ca5680c",
                 "label": "Description",
                 "name": "av_description",
-                "type": "textarea",
+                "type": "wysiwyg",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -829,10 +829,10 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
-                "maxlength": "",
-                "rows": "",
-                "new_lines": ""
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
             },
             {
                 "key": "field_5d0113dd5680d",
@@ -1070,9 +1070,9 @@
                 "key": "field_5d0b559d68985",
                 "label": "Description",
                 "name": "sv_description",
-                "type": "textarea",
+                "type": "wysiwyg",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -1080,10 +1080,10 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
-                "maxlength": "",
-                "rows": "",
-                "new_lines": ""
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
             },
             {
                 "key": "field_5d0b55a068986",
@@ -1204,7 +1204,7 @@
                 "key": "field_5d0b5faffd8fe",
                 "label": "Description",
                 "name": "pr_description",
-                "type": "textarea",
+                "type": "wysiwyg",
                 "instructions": "",
                 "required": 1,
                 "conditional_logic": 0,
@@ -1214,10 +1214,10 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
-                "maxlength": "",
-                "rows": "",
-                "new_lines": ""
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
             },
             {
                 "key": "field_5d0b5fc7fd8ff",

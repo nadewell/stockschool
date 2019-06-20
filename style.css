@@ -365,6 +365,10 @@ section.advantages h2.section-title::after {
 }
 section.advantages .advantages-desc{
     text-align: center;
+    margin-bottom: 50px;
+}
+section.advantages .advantages-desc > p:last-child{
+    margin-bottom: 0;
 }
 /******* Testimonials *******/
 section.testimonials{
@@ -963,9 +967,13 @@ section.services h2.section-title {
 section.services h2.section-title::after {
     background: #10003d;
 }
-section.services .services-desc{
+section.services .service-desc{
     width: 100%;
     text-align: center;
+    margin-bottom: 50px;
+}
+section.services .service-desc > p:last-child{
+    margin-bottom: 0;
 }
 /******** Pricing Section ********/
 section.pricing{
@@ -982,12 +990,15 @@ section.pricing .pricing-desc{
     text-align: center;
     margin-bottom: 50px;
 }
-.plan {
+section.pricing .pricing-desc > p:last-child{
+    margin-bottom: 0;
+}
+section.pricing .plan {
     padding: 20px 25px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px 0px #bbbbbb;
 }
-.plan .title {
+section.pricing .plan .title {
     font-size: 26px;
     font-weight: 500;
     line-height: 1;
@@ -997,7 +1008,7 @@ section.pricing .pricing-desc{
     padding: 20px;
     margin-bottom: 0px;
 }
-.plan .duration {
+section.pricing .plan .duration {
     font-size: 16px;
     font-weight: 400;
     line-height: 1;
@@ -1005,7 +1016,7 @@ section.pricing .pricing-desc{
     text-align: center;
     margin-bottom: 20px;
 }
-.plan .price {
+section.pricing .plan .price {
     font-size: 21px;
     font-weight: 400;
     line-height: 1;
@@ -1023,10 +1034,13 @@ section.about h2.section-title {
 section.about h2.section-title::after {
     background: #10003d;
 }
-section.about .pricing-desc{
+section.about .about-desc{
     width: 100%;
     text-align: center;
     margin-bottom: 50px;
+}
+section.about .about-desc > p:last-child{
+    margin-bottom: 0;
 }
 /******** Contact Page ********/
 section.contact{
@@ -1038,10 +1052,13 @@ section.contact h2.section-title {
 section.contact h2.section-title::after {
     background: #10003d;
 }
-section.contact .pricing-desc{
+section.contact .contact-desc{
     width: 100%;
     text-align: center;
     margin-bottom: 50px;
+}
+section.contact .contact-desc > p:last-child{
+    margin-bottom: 0;
 }
 section.contact ul.simple-list > li{
     display: flex;
@@ -1057,4 +1074,25 @@ section.contact ul.simple-list > li > i {
     margin-right: 10px;
     font-size: 18px;
     color: #10003d;
+}
+/******** 404 Page ********/
+section.error404 {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 50px 0px;
+}
+section.error404 h2.section-title {
+    color: #10003d;
+    margin-bottom: 10px;
+}
+section.error404 h2.section-title::after {
+    background: #10003d;
+}
+section.error404 .error404-desc{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
 }

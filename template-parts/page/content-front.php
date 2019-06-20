@@ -138,7 +138,7 @@ $av_list2 = get_field('av_list2');
     <div class="container">
         <div class="row">
             <h2 class="section-title"><?php echo $av_heading; ?></h2>
-            <p class="advantages-desc"><?php echo $av_description; ?></p>
+            <div class="advantages-desc"><?php echo $av_description; ?></div>
             <ul class="fancy-list col-md-6 col-sm-12">
                 <?php 
                 if($av_list1):

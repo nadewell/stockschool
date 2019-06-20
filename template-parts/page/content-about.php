@@ -15,7 +15,7 @@ $points = get_field('ab_points');
             </div>
             <div class="col-md-6 col-sm-12">
                 <h2 class="section-title"><?php echo $ab_heading; ?></h2>
-                <div class="services-desc"><?php echo $ab_description; ?></div>
+                <div class="about-desc"><?php echo $ab_description; ?></div>
                 <ul class="fancy-list col-md-6 col-sm-12">
                     <?php 
                     if($points):

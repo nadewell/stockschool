@@ -12,7 +12,7 @@ $form = get_field('ct_form');
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <h2 class="section-title"><?php echo $ct_heading; ?></h2>
-                <div class="services-desc"><?php echo $ct_description; ?></div>
+                <div class="contact-desc"><?php echo $ct_description; ?></div>
                 <ul class="simple-list">
                     <?php 
                     if($points):

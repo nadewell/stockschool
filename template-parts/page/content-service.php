@@ -11,7 +11,7 @@ $sv_list2 = get_field('sv_list2');
     <div class="container">
         <div class="row">
             <h2 class="section-title"><?php echo $sv_heading; ?></h2>
-            <p class="services-desc"><?php echo $sv_description; ?></p>
+            <div class="service-desc"><?php echo $sv_description; ?></div>
             <ul class="fancy-list col-md-6 col-sm-12">
                 <?php 
                 if($sv_list1):
@@ -47,7 +47,7 @@ $plans = get_field('plan');
         <div class="container">
             <div class="row justify-content-center">
                 <h2 class="section-title"><?php echo $pr_heading; ?></h2>
-                <p class="pricing-desc"><?php echo $pr_description; ?></p>
+                <div class="pricing-desc"><?php echo $pr_description; ?></div>
                 <?php 
                 if($plans):
                     foreach( $plans as $plan ): 
@@ -68,7 +68,7 @@ $plans = get_field('plan');
                             ?>
                         </ul>
                         <div class="price"><?php echo $plan['price']; echo __( ' INR', 'stockschool' ); ?></div>
-                        <div class="text-center"><button class="btn-outline btn-primary buy-now" id="<?php echo $plan['button_id']; ?>"><?php echo $plan['button_text']; ?></button></div>
+                        <div class="text-center"><button class="btn btn-primary buy-now" id="<?php echo $plan['button_id']; ?>"><?php echo $plan['button_text']; ?></button></div>
                     </div>
                 </div>
                 <?php 
