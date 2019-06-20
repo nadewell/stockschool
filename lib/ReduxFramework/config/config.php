@@ -240,7 +240,7 @@ Redux::setSection( $opt_name, array(
     'fields'           => array(
         array(
             'id'       => 'header-widget',
-            'type'     => 'textarea',
+            'type'     => 'editor',
             'title'    => __( 'Header Widget', 'redux-framework-demo' ),
             'subtitle' => __( 'header widget', 'redux-framework-demo' ),
             'desc'     => __( 'Widget which is place besides navigation menu', 'redux-framework-demo' ),

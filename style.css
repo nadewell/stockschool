@@ -35,6 +35,11 @@
     margin-right: 0px;
     margin-left: 10px;
 }
+ul.simple-list{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px
+}
 ul.fancy-list{
     list-style: none;
     padding: 0;
@@ -483,6 +488,7 @@ section.latest-blog .row:first-child{
 /****** Blog Post *****/
 .blog .post,
 .archive .post,
+.archive .testimonial,
 .search .post {
     margin-bottom: 30px;
     border: 1px solid #dddddd;
@@ -563,7 +569,8 @@ section.latest-blog .row:first-child{
     color: #333333;
 }
 /****** Single Post *****/
-.single .post{
+.single .post,
+.single .testimonial {
     margin-bottom: 50px;
     border: 1px solid #dddddd;
     border-bottom: 4px solid #10003d;
@@ -596,13 +603,12 @@ section.latest-blog .row:first-child{
     align-items: center;
     margin-bottom: 15px;
 }
-.single .post-meta > span {
+.single .post-meta .post-date,
+.single .post-meta .post-category,
+.single .post-meta .post-category a {
     color: #999999;
     font-size: 14px;
     font-weight: 300;
-}
-.single .post-meta .post-category a {
-    color: #999999;
 }
 .single .post-meta .post-category a:hover,
 .single .post-meta .post-category a:focus {
@@ -612,6 +618,16 @@ section.latest-blog .row:first-child{
     font-size: 16px;
     font-weight: 400;
     color: #333333;
+}
+.single .post-tags,
+.single .post-tags > a {
+    font-size: 16px;
+    font-weight: 300;
+    color: #999999;
+    text-decoration: none;
+}
+.single .post-tags > a:hover{
+    color: #10003d;
 }
 /******* Footer *******/
 .site-footer {
@@ -680,7 +696,7 @@ section.latest-blog .row:first-child{
 }
 .post-extras .author-box {
     border-bottom: 1px solid #dddddd;
-
+    margin-bottom: 15px;
 }
 .post-extras .author-box .author-gravtar{
     margin-bottom: 10px;
@@ -699,9 +715,6 @@ section.latest-blog .row:first-child{
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
-}
-.post-navigation {
-    margin-top: 15px;
 }
 .post-navigation .nav-links {
     display: table;
@@ -938,4 +951,110 @@ section.latest-blog .row:first-child{
     font-weight: 300;
     line-height: 1;
     color: #ffffff;
+}
+/******** Service Page ********/
+/******** Service section ********/
+section.services{
+    padding: 50px 0px 50px 0px;
+}
+section.services h2.section-title {
+    color: #10003d;
+}
+section.services h2.section-title::after {
+    background: #10003d;
+}
+section.services .services-desc{
+    width: 100%;
+    text-align: center;
+}
+/******** Pricing Section ********/
+section.pricing{
+    padding: 50px 0px 50px 0px;
+}
+section.pricing h2.section-title {
+    color: #10003d;
+}
+section.pricing h2.section-title::after {
+    background: #10003d;
+}
+section.pricing .pricing-desc{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.plan {
+    padding: 20px 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px #bbbbbb;
+}
+.plan .title {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1;
+    color: #10003d;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+.plan .duration {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #999999;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.plan .price {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/******** About Page ********/
+section.about{
+    padding: 50px 0px 50px 0px;
+}
+section.about h2.section-title {
+    color: #10003d;
+}
+section.about h2.section-title::after {
+    background: #10003d;
+}
+section.about .pricing-desc{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+/******** Contact Page ********/
+section.contact{
+    padding: 50px 0px 50px 0px;
+}
+section.contact h2.section-title {
+    color: #10003d;
+}
+section.contact h2.section-title::after {
+    background: #10003d;
+}
+section.contact .pricing-desc{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+section.contact ul.simple-list > li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+section.contact ul.simple-list > li {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+section.contact ul.simple-list > li > i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #10003d;
 }

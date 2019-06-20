@@ -6,7 +6,10 @@ $slides = get_field('slider');
 
 ?>
 <section class="hero-slider">
-    <?php foreach ( $slides as $slide ): ?>
+    <?php 
+    if($slides):
+        foreach ( $slides as $slide ): 
+    ?>
     <div class="slide pb-5 pt-5" data-attachment="scroll" data-image="<?php echo $slide['image']['url']; ?>">
         <div class="slide-content">
             <div class="container">
@@ -20,7 +23,10 @@ $slides = get_field('slider');
             </div>
         </div>
     </div>
-    <?php endforeach; ?>
+    <?php 
+        endforeach; 
+    endif;
+    ?>
 </section>
 
 <?php 
@@ -58,7 +64,10 @@ $services = get_field('services');
     <div class="container">
         <div class="row">
             <h2 class="section-title"><?php echo $sr_heading; ?></h2>
-            <?php foreach ($services as $service): ?>
+            <?php 
+            if($services):
+                foreach ($services as $service): 
+            ?>
             <div class="service col-md-4 col-sm-12">
                 <div class="service-wrapper">
                     <div class="service-icon"><?php echo $service['icon']; ?></div>
@@ -66,7 +75,10 @@ $services = get_field('services');
                     <p class="service-desc"><?php echo $service['description']; ?></p>
                 </div>
             </div>
-            <?php endforeach; ?>
+            <?php 
+                endforeach; 
+            endif;
+            ?>
         </div>
     </div>
 </section>
@@ -85,17 +97,29 @@ $tricks = get_field('tricks');
             <div class="tips col-md-6 col-sm-12">
                 <h4 class="col-title"><?php echo $tp_title; ?></h4>
                 <ul class="fancy-list">
-                    <?php foreach( $tips as $tip ): ?>
+                    <?php 
+                    if($tips):
+                        foreach( $tips as $tip ): 
+                    ?>
                     <li><?php echo $tip['point']; ?></li>
-                    <?php endforeach; ?>
+                    <?php 
+                        endforeach; 
+                    endif;
+                    ?>
                 </ul>
             </div>
             <div class="tricks col-md-6 col-sm-12">
                 <h4 class="col-title"><?php echo $tr_title; ?></h4>
                 <ul class="fancy-list">
-                    <?php foreach( $tricks as $trick ): ?>
+                    <?php 
+                    if($tricks):
+                        foreach( $tricks as $trick ): 
+                    ?>
                     <li><?php echo $trick['point']; ?></li>
-                    <?php endforeach; ?>
+                    <?php 
+                        endforeach; 
+                    endif;
+                    ?>
                 </ul>
             </div>
         </div>
@@ -114,16 +138,28 @@ $av_list2 = get_field('av_list2');
     <div class="container">
         <div class="row">
             <h2 class="section-title"><?php echo $av_heading; ?></h2>
-            <P class="advantages-desc"><?php echo $av_description; ?></P>
+            <p class="advantages-desc"><?php echo $av_description; ?></p>
             <ul class="fancy-list col-md-6 col-sm-12">
-                <?php foreach( $av_list1 as $point ): ?>
+                <?php 
+                if($av_list1):
+                    foreach( $av_list1 as $point ): 
+                ?>
                 <li><?php echo $point['point']; ?></li>
-                <?php endforeach; ?>
+                <?php 
+                    endforeach; 
+                endif;
+                ?>
             </ul>
             <ul class="fancy-list col-md-6 col-sm-12">
-                <?php foreach( $av_list2 as $point ): ?>
+                <?php 
+                if($av_list2):
+                    foreach( $av_list2 as $point ): 
+                ?>
                 <li><?php echo $point['point']; ?></li>
-                <?php endforeach; ?>
+                <?php 
+                    endforeach; 
+                endif;
+                ?>
             </ul>
         </div>
     </div>
@@ -173,7 +209,7 @@ $ts_heading = get_field('ts_heading');
 </section>
 <?php 
 /*************
- * Advantages Content
+ * Latest Content
  */
 $bl_heading = get_field('bl_heading');
 ?>

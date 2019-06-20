@@ -6,19 +6,23 @@ get_header();
 <div id="page" class="site-content">
     <div class="container">
         <div class="row">
-            <div id="primary" class="content-area col-md-12 col-sm-12">
-                <div class="row">
+            <div id="primary" class="content-area col-md-8 col-sm-12">
+                <main id="main" class="site-main" role="main">
                     <?php
                     if( have_posts() ):
                         while( have_posts() ): the_post();
-                            get_template_part( 'template-parts/post/content','testimonial' );
+                            // Post Content Template 
+                            get_template_part( 'template-parts/post/content','testimonial-single' );
+                            // Post Navigation template
+                            get_template_part('template-parts/post/pagination', 'single-testimonial' );
                         endwhile;
-                    else:
-                        echo '<p>No posts available.</p>';
                     endif;
                     ?>
-                </div>
+                </main>
+                
             </div>
+            <!-- Sidebar -->
+            <?php get_sidebar(); ?>
         </div>
     </div>
 </div>

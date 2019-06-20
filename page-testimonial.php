@@ -1,17 +1,10 @@
 <?php
-
+/*****************
+ * Template Name:  Testimonial Page
+ */
 get_header();
 
-global $query;
-$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
-$args  = array(
-    'post_type'         => 'testimonial',
-    'orderby'           => 'date',
-    'order'             => 'DESC',
-    'posts_per_page'    => 3,
-    'paged'             => $paged
-);
-$query = new WP_Query($args);
+set_query_var('post_type', 'testimonial');
 ?>
 
 <div id="page" class="site-content">
