@@ -195,3 +195,26 @@ function my_acf_json_save_point( $path ) {
     // return
     return $path;
 }
+
+/*****************
+ * Add isNew user meta on user registration
+ */
+add_action( 'user_register', 'add_isnew_usermeta', 10, 1 );
+function add_isnew_usermeta( $user_id ) {
+    update_user_meta($user_id, 'subscription', 'none');
+}
+/*********************
+ * Add Customer Role
+ */
+$role = 'customer';
+$display_name = 'Customer';
+$capabilities = 'read';
+add_role( $role, $display_name, $capabilities );
+/*******************
+ * When user 'customer' logged in
+ */
+function your_function( $user_login, $user ) {
+    print_r($user);
+    die;
+}
+add_action('wp_login', 'your_function', 10, 2);
