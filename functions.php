@@ -214,7 +214,7 @@ add_role( $role, $display_name, $capabilities );
  * When user 'customer' logged in
  */
 function your_function( $user_login, $user ) {
-    print_r($user);
-    die;
+    // print_r($user);
+    // die;
 }
 add_action('wp_login', 'your_function', 10, 2);
