@@ -16,16 +16,31 @@ $points = get_field('ab_points');
             <div class="col-md-6 col-sm-12">
                 <h2 class="section-title"><?php echo $ab_heading; ?></h2>
                 <div class="about-desc"><?php echo $ab_description; ?></div>
-                <ul class="fancy-list col-md-6 col-sm-12">
+                <div class="accordion" id="about_accordion">
                     <?php 
+					$i = 1;
                     if($points):
                         foreach( $points as $point ): ?>
-                    <li><?php echo $point['point']; ?></li>
+						<div class="card">
+							<div class="card-header" id="heading<?php echo $i; ?>">
+							  <h2 class="mb-0">
+								<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $i; ?>" aria-expanded="false" aria-controls="collapse<?php echo $i; ?>">
+								  <?php print_r( $point['heading'] ); ?>
+								</button>
+							  </h2>
+							</div>
+							<div id="collapse<?php echo $i; ?>" class="collapse" aria-labelledby="heading<?php echo $i; ?>" data-parent="#about_accordion">
+							  <div class="card-body">
+								  <?php print_r( $point['description'] ); ?>
+							  </div>
+							</div>
+						</div>
                     <?php 
+						$i++;
                         endforeach; 
                     endif;
                     ?>
-                </ul>
+                </div>
             </div>
         </div>
     </div>

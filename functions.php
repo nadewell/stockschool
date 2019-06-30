@@ -218,10 +218,3 @@ function your_function( $user_login, $user ) {
     // die;
 }
 add_action('wp_login', 'your_function', 10, 2);
-/********************
- * Firebase Functions
- */
-function firebase_scripts(){
-    wp_enqueue_script( 'firebase', 'https://www.gstatic.com/firebasejs/6.2.4/firebase.js' , array(), '6.2.4', false);
-}
-add_action( 'wp_enqueue_scripts', 'firebase_scripts' );

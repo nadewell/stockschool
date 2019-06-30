@@ -23,17 +23,9 @@
 .navbar {
     box-shadow: 0px 1px 5px 0px #999999;
 }
-.navbar-nav  li.nav-item {
-    margin-right: 10px;
-    margin-left: 10px;
-}
-.navbar-nav  li.nav-item:first-child {
-    margin-right: 10px;
-    margin-left: 0px;
-}
-.navbar-nav  li.nav-item:last-child {
-    margin-right: 0px;
-    margin-left: 10px;
+.navbar .navbar-nav .nav-link {
+    font-size: 16px;
+	font-weight: 500;
 }
 ul.simple-list{
     list-style: none;
@@ -77,10 +69,6 @@ img{
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.free-trial {
-    margin-left: 15px;
-    border-radius: 5px;
-}
 .hero-banner {
     width: 100%;
     min-height: 250px;
@@ -118,6 +106,9 @@ img{
 }
 .navbar-brand.logo > h1 {
     display: none;
+}
+.free-trial {
+	margin: 1rem 0rem 0rem 0rem;
 }
 /******* HERO SLIDER *******/
 .hero-slider{
@@ -1049,11 +1040,40 @@ section.about h2.section-title::after {
 }
 section.about .about-desc{
     width: 100%;
-    text-align: center;
     margin-bottom: 50px;
 }
 section.about .about-desc > p:last-child{
     margin-bottom: 0;
+}
+section.about .accordion .card {
+    border-radius: 0px !important;
+}
+section.about .accordion .card .card-header {
+    padding: 0;
+    border-radius: 0px !important;
+}
+section.about .accordion .card .card-header > h2{
+	font-size: 1.5rem;
+}
+section.about .accordion .btn {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+	border-radius: 0;
+    text-align: left;
+	background: #ffffff;
+	color: #333333;
+	text-decoration: none;
+}
+section.about .accordion .btn:hover{
+	background: #10003d;
+	color: #ffffff;
+	text-decoration: none;
+}
+section.about .accordion .btn[aria-expanded="true"]{
+	background: #10003d;
+	color: #ffffff;
+	text-decoration: none;
 }
 /******** Contact Page ********/
 section.contact{
@@ -1108,4 +1128,23 @@ section.error404 .error404-desc{
     width: 100%;
     text-align: center;
     margin-bottom: 50px;
+}
+/* Media Query for PC and Laptop */
+@media (min-width:992px){
+	.navbar-nav  li.nav-item {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	.navbar-nav  li.nav-item:first-child {
+		margin-right: 10px;
+		margin-left: 0px;
+	}
+	.navbar-nav  li.nav-item:last-child {
+		margin-right: 0px;
+		margin-left: 10px;
+	}
+	.free-trial {
+		margin-left: 15px;
+		border-radius: 5px;
+	}
 }
