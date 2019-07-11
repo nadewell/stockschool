@@ -170,6 +170,7 @@ $av_list2 = get_field('av_list2');
  */
 $ts_image = get_field('ts_image');
 $ts_heading = get_field('ts_heading');
+/*
 ?>
 <section class="testimonials" data-attachment="scroll" data-image="<?php echo $ts_image['url']; ?>">
     <div class="container">
@@ -206,6 +207,64 @@ $ts_heading = get_field('ts_heading');
             <a href="<?php echo site_url().'/testimonial' ?>" class="btn btn-primary">All Testimonials</a>
         </div>
     </div>
+</section>
+*/?>
+<?php 
+/*************
+* Our Performance
+*/
+$tradings = get_field('trading');
+?>
+<section class="performance">
+	<div class="container">
+		<div class="row  justify-content-center">
+			<?php foreach( $tradings as $trading ): ?>
+			<h2 class="section-title"><?php echo $trading['title']; ?></h2>
+			<table class="table table-bordered table-hover table-responsive">
+				<thead class="thead-light">
+					<tr>
+						<td>Sr. No.</td>
+						<td>Stock</td>
+						<td>Qty.</td>
+						<td>Buy/Sell</td>
+						<td>Entry Rate</td>
+						<td>Entry Time</td>
+						<td>Exit Rate</td>
+						<td>Exit Time</td>
+						<td>Profit/Loss</td>
+						<td>Comments</td>
+					</tr>
+				</thead>
+				<tbody>
+					<?php 
+						$i = 1;
+						$color = "";
+						foreach($trading['stock'] as $trade): 
+						$profit_loss = intval( $trade['exit_rate']*$trade['qty'] - $trade['entry_rate']*$trade['qty'] );
+						if( $profit_loss < 0 ){ $color = "text-danger"; }
+						elseif( $profit_loss > 0 || $profit_loss == 0 ){ $color = "text-success"; }
+					?>
+					<tr class="<?php echo $color; ?>">
+						<td><?php echo $i; ?></td>
+						<td><?php echo $trade['name']; ?></td>
+						<td><?php echo $trade['qty']; ?></td>
+						<td><?php echo $trade['buysell']; ?></td>
+						<td><?php echo $trade['entry_rate']; ?></td>
+						<td><?php echo $trade['entry_time']; ?></td>
+						<td><?php echo $trade['exit_rate']; ?></td>
+						<td><?php echo $trade['exit_time']; ?></td>
+						<td><?php echo $profit_loss; ?></td>
+						<td><?php echo $trade['comment']; ?></td>
+					</tr>
+					<?php 
+						$i++;
+						endforeach; 
+					?>
+				</tbody>
+			</table>
+			<?php endforeach; ?>
+		</div>
+	</div>
 </section>
 <?php 
 /*************

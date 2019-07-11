@@ -5,6 +5,22 @@ jQuery('.hero-slider').slick({
     nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>',
     autoplay: true,
     autoplaySpeed: 3000,
+	responsive:[
+		{
+			breakpoint: 992,
+			settings: {
+				arrows: false,
+				dots: false
+			}
+		},
+		{
+		  breakpoint: 480,
+		  settings: {
+			  arrows: false,
+			  dots: false
+		  }
+		}
+	]
 });
 jQuery('section.testimonials .testimonials-wrapper').slick({
     arrows: true,
