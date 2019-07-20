@@ -1,3 +1,16 @@
+// Header Fixed Class add/remove on scroll
+jQuery(document).on('scroll',function(){
+	var scrollTop = jQuery(this).scrollTop();
+	var header = jQuery('.site-header');
+	var header_height = header.outerHeight(true);
+
+	if( scrollTop >= parseInt( header_height + 70 ) ){
+		header.addClass('fixed');
+	}else{
+		header.removeClass('fixed');
+	}
+});
+//Hero Slider Init
 jQuery('.hero-slider').slick({
     arrows: true,
     dots: true,
@@ -22,6 +35,7 @@ jQuery('.hero-slider').slick({
 		}
 	]
 });
+//Testimonial Slider init
 jQuery('section.testimonials .testimonials-wrapper').slick({
     arrows: true,
     dots: false,
